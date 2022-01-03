@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
+
   <title>Walkers</title>
 </head>
 
@@ -24,10 +25,10 @@
       <div id="my-sidebar" class="sidebar">
 
         <ul class="nav-list">
-          <li><a class="close-sidebar nav-link" href="#">Home</a></li>
-          <li><a class="close-sidebar nav-link" href="#">Join Us</a></li>
-          <li><a class="close-sidebar nav-link" href="#">Register</a></li>
-          <li><a class="close-sidebar nav-link" href="#">Log In</a></li>
+          <li><a class="close-sidebar" href="#">Home</a></li>
+          <li><a class="close-sidebar" href="#">Join Us</a></li>
+          <li><a class="close-sidebar" href="#">Register</a></li>
+          <li><a class="close-sidebar" href="#">Log In</a></li>
         </ul>
       </div>
     </nav>
@@ -37,10 +38,10 @@
     <div class="home-bg-shape-1"></div>
     <div class="home-bg-shape-2"></div>
     <div class="container">
-      <div class="half-bg">
-        <img src="assets/images/q-mark.png" class="mark small-mark small-mark-left" alt="A question mark">
-        <img src="assets/images/q-mark.png" class="mark big-mark" alt="A question mark">
-        <img src="assets/images/q-mark.png" class="mark small-mark small-mark-right" alt="A question mark">
+      <div class="half-home-bg">
+        <img src="assets/images/q-mark.png" class="mark-img small-mark small-mark-left" alt="A question mark-img">
+        <img src="assets/images/q-mark.png" class="mark-img big-mark" alt="A question mark">
+        <img src="assets/images/q-mark.png" class="mark-img small-mark small-mark-right" alt="A question mark-img">
       </div>
       <div class="main-image image-shadow">
         <img src="assets/images/dog1.png" class="home-dog-img" alt="A dog">
@@ -59,79 +60,114 @@
       </div>
     </div>
   </main>
+  <!-- search section -->
+  <section class="searching-section">
+    <div class="home-bg-shape-2"></div>
+    <div class="container">
+      <div class="search-form">
+        <h2>LET'S SEARCHING!</h2>
+        <form id="form-box">
+          <div class="form-input"><label for="post-code">My Post Code</label>
+            <input type="text" id="post-code">
+          </div>
+          <div class="form-input"><label for="care-type">Care Type</label>
+            <input list="care-type">
+            <datalist id="care-type">
+              <option value="1">
+              <option value="2">
+              <option value="3">
+              <option value="4">
+              <option value="5">
+            </datalist>
+          </div>
+          <div class="form-input">
+            <label for="dog-size">My Dog Size</label>
+            <input list="dog-size">
+            <datalist id="dog-size">
+              <option value="1">
+              <option value="2">
+              <option value="3">
+              <option value="4">
+              <option value="5">
+            </datalist>
+          </div>
+          <div class="form-input">
+            <label for="time">How Long</label>
+            <input list="time">
+            <datalist id="time">
+              <option value="1">
+              <option value="2">
+              <option value="3">
+              <option value="4">
+              <option value="5">
+            </datalist>
+          </div>
+        </form>
+        <input id="send-button" class="send-btn button" type="submit" value="SEARCH">
+      </div>
+      <div class="search-dog-img">
+        <img src="assets/images/dog2.png" class="search-dog-image" alt="A dog">
+      </div>
+      <div class="search-section-box">
+        <img src="assets/images/heart.png" class="heart-1" alt="Heart icon">
+        <img src="assets/images/heart.png" class="heart-2" alt="Heart icon">
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <div class="box-logo">
+      <a class="scroll" href="#home-section">
+        <img src="assets/images/logo.gif" alt="Logo">
+      </a>
+    </div>
+    <div id="footer-container">
+      <div class="footer-box , social-icons">
+        <h3>Stay in touch</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page"><i
+                class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page"><i
+                class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+              aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <h3>Subscribe to our newsletter</h3>
+        <button id="open-newsletter" class="subscribe-button">Subscribe</button>
+      </div>
+      <div class="footer-box">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a class="scroll" href="#home-section">Home</a></li>
+          <li><a class="scroll" href="#about-section">About</a></li>
+          <li><a class="scroll" href="#products-section">Products</a></li>
+          <li><a class="scroll" href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h3> Office working hours</h3>
+        <ul>
+          <li>Monday: 9:00 - 18:00</li>
+          <li>Tuesday: 9:00 - 18:00</li>
+          <li>Wednesday: 9:00 - 18:00</li>
+          <li>Thursday: 9:00 - 18:00</li>
+          <li>Friday: 9:00 - 18:00</li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="fas fa-phone-alt"></i> 0333 333 333</li>
+          <li><i class="fas fa-envelope"></i> info@walkers.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Wolverhampton, UK</li>
+        </ul>
+      </div>
+    </div>
+    <p>Walkers &copy; 2021, All Rights Reserved</p>
+  </footer>
   <script src="https://kit.fontawesome.com/111b3a0b11.js" crossorigin="anonymous"></script>
-  <script>
+  <script src="assets/js/index.js"></script>
 
-    // Code from https://codepen.io/JoseRosario/pen/BWqMwK*
-    function toggleHamburgerIcon() {
-      let wrapperMenu = document.querySelector('.wrapper-menu');
-
-      wrapperMenu.addEventListener('click', function () {
-        wrapperMenu.classList.toggle('open');
-      })
-    }
-
-    /* My code starts here
-    Open and close sidebar for small devices*/
-    const hamburgerIcon = document.querySelector('.wrapper-menu');
-    const closeButtons = document.querySelectorAll('.close-sidebar');
-
-    let openSidebar = true
-
-    toggleHamburgerIcon()
-
-    function handleSidebar() {
-      console.log(openSidebar)
-
-      if (openSidebar) {
-        openMenu();
-        openSidebar = false;
-        console.log('open')
-      } else {
-        closeMenu();
-        openSidebar = true;
-        console.log('close')
-      }
-    }
-
-    function openMenu() {
-      document.getElementById('my-sidebar').style.width = '50%'
-    }
-
-    function closeMenu() {
-      document.getElementById('my-sidebar').style.width = null;
-    }
-
-    hamburgerIcon.addEventListener('click', function (e) {
-      handleSidebar()
-    });
-
-    function toggleWrapperMenuOnResize() {
-      if (window.innerWidth >= 1050) {
-        closeMenu()
-        openSidebar = true;
-        console.log('close')
-        let wrapperMenu = document.querySelector('.wrapper-menu.open');
-        if (wrapperMenu) {
-          wrapperMenu.classList.toggle('open');
-        }
-      }
-    }
-
-    window.addEventListener('resize', toggleWrapperMenuOnResize);
-
-    /* After pressing sidebar links and scrolling to a given section,
-    the sidebar closes automatically*/
-    for (const button of closeButtons) {
-      let wrapperMenu = document.querySelector('.wrapper-menu');
-      button.addEventListener('click', function (e) {
-        if (window.innerWidth < 1050) {
-          wrapperMenu.classList.toggle('open');
-          handleSidebar()
-        }
-      });
-    } 
-  </script>
 </body>
 
 </html>
