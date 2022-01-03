@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Walkers</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header">
+
+    <div class="logo"><a class="close-sidebar" href="#home-section"><img src="assets/images/logo.gif" alt="Logo"></a>
+    </div>
+    <nav id="nav">
+      <div class="wrapper-menu">
+        <div class="line-menu half start"></div>
+        <div class="line-menu"></div>
+        <div class="line-menu half end"></div>
+      </div>
+      <div id="my-sidebar" class="sidebar">
+
+        <ul class="nav-list">
+          <li><a class="close-sidebar nav-link" href="#">Home</a></li>
+          <li><a class="close-sidebar nav-link" href="#">Join Us</a></li>
+          <li><a class="close-sidebar nav-link" href="#">Register</a></li>
+          <li><a class="close-sidebar nav-link" href="#">Log In</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- hero section -->
+  <main id="home-section">
+    <div class="home-bg-shape-1"></div>
+    <div class="home-bg-shape-2"></div>
+    <div class="container">
+      <div class="half-bg">
+        <img src="assets/images/q-mark.png" class="mark small-mark small-mark-left" alt="A question mark">
+        <img src="assets/images/q-mark.png" class="mark big-mark" alt="A question mark">
+        <img src="assets/images/q-mark.png" class="mark small-mark small-mark-right" alt="A question mark">
+      </div>
+      <div class="main-image image-shadow">
+        <img src="assets/images/dog1.png" class="home-dog-img" alt="A dog">
+      </div>
+      <div class="home-txt center">
+        <div class="main-txt center">
+          <h1>ARE YOU LOOKING FOR PROFESSIONAL PET SITTER OR DOG WALKER?</h1>
+          <p>Find one with us !</p>
+        </div>
+        <div class="button center">
+          <a href="#">
+            SEARCH
+            <span><i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://kit.fontawesome.com/111b3a0b11.js" crossorigin="anonymous"></script>
+  <script>
+
+    // Code from https://codepen.io/JoseRosario/pen/BWqMwK*
+    function toggleHamburgerIcon() {
+      let wrapperMenu = document.querySelector('.wrapper-menu');
+
+      wrapperMenu.addEventListener('click', function () {
+        wrapperMenu.classList.toggle('open');
+      })
+    }
+
+    /* My code starts here
+    Open and close sidebar for small devices*/
+    const hamburgerIcon = document.querySelector('.wrapper-menu');
+    const closeButtons = document.querySelectorAll('.close-sidebar');
+
+    let openSidebar = true
+
+    toggleHamburgerIcon()
+
+    function handleSidebar() {
+      console.log(openSidebar)
+
+      if (openSidebar) {
+        openMenu();
+        openSidebar = false;
+        console.log('open')
+      } else {
+        closeMenu();
+        openSidebar = true;
+        console.log('close')
+      }
+    }
+
+    function openMenu() {
+      document.getElementById('my-sidebar').style.width = '50%'
+    }
+
+    function closeMenu() {
+      document.getElementById('my-sidebar').style.width = null;
+    }
+
+    hamburgerIcon.addEventListener('click', function (e) {
+      handleSidebar()
+    });
+
+    function toggleWrapperMenuOnResize() {
+      if (window.innerWidth >= 1050) {
+        closeMenu()
+        openSidebar = true;
+        console.log('close')
+        let wrapperMenu = document.querySelector('.wrapper-menu.open');
+        if (wrapperMenu) {
+          wrapperMenu.classList.toggle('open');
+        }
+      }
+    }
+
+    window.addEventListener('resize', toggleWrapperMenuOnResize);
+
+    /* After pressing sidebar links and scrolling to a given section,
+    the sidebar closes automatically*/
+    for (const button of closeButtons) {
+      let wrapperMenu = document.querySelector('.wrapper-menu');
+      button.addEventListener('click', function (e) {
+        if (window.innerWidth < 1050) {
+          wrapperMenu.classList.toggle('open');
+          handleSidebar()
+        }
+      });
+    } 
+  </script>
+</body>
+
+</html>
