@@ -167,8 +167,8 @@ li {
 
 .nav-list a {
   text-transform: uppercase;
-  margin-left: 20px;
-  margin-right: 30px;
+  margin-left: 10px;
+  margin-right: 20px;
   margin-top: 10px;
   transition-duration: 0.2s;
   font-family: 'Lato', sans-serif;
@@ -596,10 +596,18 @@ li {
 }
 
 .register-image {
-  background: url(../images/dog-love.gif) no-repeat center center/cover;
-  height: 75%;
+  background: url(../images/duggy-out.gif) no-repeat center center/cover;
+  height: 100%;
+  width: 50%;
+  margin-right: 40px;
+  left: 0;
+  position: absolute;
+  z-index: -10;
+}
+
+.half-bg {
+  height: 100%;
   width: 60%;
-  padding: 20px;
 }
 
 .register-heading {
