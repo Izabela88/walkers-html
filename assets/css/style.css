@@ -679,10 +679,23 @@ li {
   grid-row: row 5;
 }
 
+.r-input p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
 .register-input {
   cursor: pointer;
 }
 
+
+/* ------------login page */
+#login {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
 
 /* --------- media queries */
 @media screen and (max-width: 1600px) {
